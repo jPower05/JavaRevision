@@ -23,6 +23,10 @@ public class Graphs {
 
         ag.print();
 
+        System.out.println('\n');
+
+        ag.depthFirstSearch(0);
+
 
     }
 
