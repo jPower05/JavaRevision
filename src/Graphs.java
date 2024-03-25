@@ -5,13 +5,14 @@ public class Graphs {
     public static void main(String[] args){
         //int[][] array = create2DArray(4);
         //print(array);
-        AdjacencyGraph ag = new AdjacencyGraph(5);
+        AdjacencyGraph2 ag = new AdjacencyGraph2(6);
 
-        ag.addNode(new AdjacencyGraph.Node('A'));   // 0
-        ag.addNode(new AdjacencyGraph.Node('B'));   // 1
-        ag.addNode(new AdjacencyGraph.Node('C'));   // 2
-        ag.addNode(new AdjacencyGraph.Node('D'));   // 3
-        ag.addNode(new AdjacencyGraph.Node('E'));   // 4
+        ag.addNode(new AdjacencyGraph2.Node('A'));   // 0
+        ag.addNode(new AdjacencyGraph2.Node('B'));   // 1
+        ag.addNode(new AdjacencyGraph2.Node('C'));   // 2
+        ag.addNode(new AdjacencyGraph2.Node('D'));   // 3
+        ag.addNode(new AdjacencyGraph2.Node('E'));   // 4
+        ag.addNode(new AdjacencyGraph2.Node('F'));   // 5
 
         ag.addEdge(0,1);// A -> B
         ag.addEdge(1,4);// B -> E
@@ -20,12 +21,15 @@ public class Graphs {
         ag.addEdge(4,2);// E -> C
         ag.addEdge(2,4);// C -> E
         ag.addEdge(2,3);// C -> D
+        ag.addEdge(0, 5);// A -> F
+        ag.addEdge(5,1); // F -> B
 
-        ag.print();
+        //ag.print();
 
         System.out.println('\n');
 
-        ag.depthFirstSearch(0);
+        //ag.depthFirstSearch(0);
+        ag.dfsAllPaths(0, 1);
 
 
     }
